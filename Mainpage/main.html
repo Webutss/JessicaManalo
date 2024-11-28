@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+      .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .navbar-brand img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%; 
+        }
+
+    </style>
+    <title>Jessica Manalo</title>
+</head>
+<body style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('background.jpg'); background-size: cover; background-attachment: fixed;">
+
+<nav class="navbar navbar-expand-lg bg-transparent color">
+  <div class="container">
+   <a class="navbar-brand text-white" href="#">
+    <img src="hgb logo.jpg" alt="Logo" >
+    HGBaquiran College
+   </a>
+   <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+     <li class="nav-item">
+      <a class="nav-link text-white" href="../Content/AboutUs.html">About</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link text-white" href="../Content/Course.html">Courses</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link text-white" href="../Content/ContactUs.html">Contact</a>
+     </li>   
+     <li class="nav-item">
+      <a class="nav-link text-white" href="../Login/LoginPage.html">Logout</a>
+     </li>   
+   </ul> 
+  </div> 
+ </div>
+</nav>
+<header class="hero-section text-white text-center py-5"> 
+ <div class="container"> 
+  <h1 class="display-4">Welcome to <span style="font-weight: bold; color: rgb(8, 109, 232);"> HGBaquiran College  
+</span></h1>
+    <p class="lead text-white" style="font-weight: bold; font-style: italic;">"The road to success is paved with good intentions, your success, then, begins with HGBaquiran College."</p>
+    <a href="../Enrollment/Enroll.html" class="btn btn-lg btn-primary mt-3">Enroll Now!</a>
+  </div>
+</header>
+<div class="container">
+ <section class="py-4">
+  <div class="row">
+   <div class="col-lg-4 mb-4">
+    <div class="card h-100 shadow-lg" style="background-color: rgba(255, 255, 255, 0.8);">
+     <div class="card-body">
+      <h5 class="card-title fw-bold">Courses</h5>
+      <p class="card-text">Explore a wide range of Quality Courses designed to Enhance your Skills and Knowledge.</p>
+     <a href="../Content/Course.html" class="btn btn-primary" id="btnCourse">Learn More</a> 
+   </div> 
+  </div>
+ </div>  
+
+
+  <div class="col-lg-4 mb-4">
+    <div class="card h-100 shadow-lg" style="background-color: rgba(255, 255, 255, .8);">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">About Us</h5>
+        <p class="card-text">HGBC is committed to Providing Quality Education and services to Empower Individual for Success.</p>
+        <a href="../Content/AboutUs.html"class="btn btn-primary" id="btnContact">Learn More</a>
+       </div>
+      </div>
+     </div>
+
+
+  <div class="col-lg-4 mb-4">
+    <div class="card h-100 shadow-lg" style="background-color: rgba(255, 255, 255, .8);">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Contact Us</h5>
+        <p class="card-text">Contact us for Support and Inquiries!</p>
+        <a href="../Content/ContactUs.html" class="btn btn-primary" id="btnContact">Get in Touch</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section> 
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | HGBaquiran College</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    .learn-more-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .learn-more-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    color: #fff;
+  }
+
+  .image-container {
+  position: relative;
+  width: 200px; /* Adjust as needed */
+  overflow: hidden;
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.image-container img {
+  width: 100%;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth image effect */
+}
+
+.image-container .caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.5s ease; /* Smooth fade-in effect */
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* Zoom effect */
+  opacity: 0.8; /* Slight fade effect */
+}
+
+.image-container:hover .caption {
+  opacity: 1; /* Show caption on hover */
+}
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /*background-color: #333;*/
+      padding: 15px;
+    }
+
+    nav h1 {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    .logo {
+      width: 50px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      font-weight: 700;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    nav ul li a:hover {
+      color: #0073e6;
+    }
+
+    .hamburger-menu {
+      display: none;
+      cursor: pointer;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 50px 20px;
+      
+    }
+
+    .hero-section h2 {
+      font-weight: 700;
+    }
+
+    .hero-section p {
+      font-style: italic;
+    }
+
+    .highlight {
+      color: #0073e6;
+    }
+
+    .enroll-button {
+      padding: 10px 20px;
+      background-color: #0073e6;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .enroll-button:hover {
+      background-color: #005bb5;
+    }
+
+    .info-cards {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .card {
+      
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      flex: 1;
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 1.25rem;
+    }
+
+    .card-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #0073e6;
+      
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .card-button:hover {
+      background-color: #005bb5;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+      }
+
+      nav ul.active {
+        display: block;
+      }
+
+      .hamburger-menu {
+        display: block;
+      }
+
+      .info-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+        margin: 10px 0;
+      }
+
+      .hero-section {
+        padding: 30px 20px;
+      }
+
+      .logo {
+        width: 40px;
+      }
+    }
+    .college-name {
+  font-size: 2em;
+}
+#loading-spinner {
+            display: none; 
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 7px solid #f3f3f3;
+            border-top: 7px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+  </style>
+</head>
+
+<body>
+   
+  <header>
+    <nav>
+        <h1 class="college-name">
+            <img src="hgb logo.jpg" alt="College Logo" class="logo">
+            HGBaquiran College
+          </h1>
+          
+      <ul class="nav-items">
+        <li><a href="../Mainpage/main.html">Home</a></li>
+        <li><a href="../Content/AboutUs.html">About</a></li>
+        <li><a href="../Content/ContactUs.html">Contact</a></li>
+      </ul>
+      <div class="hamburger-menu" id="hamburger">
+        <span class="material-icons">menu</span>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <h2><span class="highlight">COURSES</span></h2>
+    </div>
+    <br><br><br><br><br>
+
+    <section class="info-cards">
+      <div class="image-container">
+        <img src="B.E.webp" alt="Sample Image">
+
+        <div class="learn-more-btn">Learn More</div>
+      </div>
+  
+      <div class="image-container">
+        <img src="BCRIM.webp" alt="Sample Image">
+
+        <div class="learn-more-btn">Learn More</div>
+      </div>
+
+      <div class="image-container">
+        <img src="I.T.webp" alt="Sample Image">
+
+        <div class="learn-more-btn">Learn More</div>
+      </div>
+  
+      <div class="image-container">
+        <img src="H.M.webp" alt="Sample Image">
+
+        <div class="learn-more-btn">Learn More</div>
+      </div>
+  
+      <div class="image-container">
+        <img src="B.A.webp" alt="Sample Image">
+
+        <div class="learn-more-btn">Learn More</div>
+      </div>
+
+      <div class="image-container">
+        <img src="B.E2.webp" alt="Sample Image">
+
+        <div class="learn-more-btn">Learn More</div>
+      </div>
+
+   
+  </section>
+  
+  <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.card-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .info-cards {
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .card h3 {
+        font-size: 1.1em; 
+    }
+
+    .card p {
+        font-size: 0.85em;
+    }
+}
+
+
+  </style>
+  
+    
+
+  </header>
+
+  <script>
+    
+
+const hamburger = document.getElementById('hamburger');
+const navItems = document.querySelector('.nav-items');
+
+hamburger.addEventListener('click', () => {
+  navItems.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !navItems.contains(e.target)) {
+    navItems.classList.remove('active');
+    hamburger.classList.remove('active');
+  }
+});
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HGBaquiran College</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(background.jpg);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: transparent;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            color: white;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            margin-top: 100px;
+            padding: 50px 0;
+            background-color: #2e4c7f;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* Content Section */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding: 0 50px;
+        }
+
+        .content-form {
+            width: 45%;
+        }
+
+        .content-form h2 {
+            font-size: 1.75rem;
+            color:  #2e4c7f;
+            margin-bottom: 20px;
+        }
+
+        .content-form i {
+            color: #2e4c7f;
+        }
+
+        .content-form section {
+            margin-bottom: 30px;
+        }
+
+        .content-form p {
+            font-size: 1.25rem;
+            color: #151414;
+            background-color: #2e4c7f;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color:  #2e4c7f;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            border: none;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color:  #2e4c7f;
+        }
+
+        /* Media Section */
+        .media {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .media i {
+            margin: 0 15px;
+            color:  #2e4c7f;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .media i:hover {
+            color: #333;
+            transform: scale(1.2);
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .content-form {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            header {
+                padding: 30px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="hgb logo.jpg" alt="Logo" style="height: 30px; margin-right: 10px;">
+                HGBaquiran College
+            </a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Mainpage/main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Content/Course.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Content/AboutUs.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Us Header -->
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <!-- Contact Information -->
+    <div class="container">
+        <div class="content">
+            <!-- Address Section -->
+            <div class="content-form">
+                <section>
+                    <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                    <h2>Address</h2>
+                    <address class="m-0 text-secondary fs-4">
+                        <a href="https://maps.app.goo.gl/ziuSF9MDihdVLNV86" target="_blank">View on Google Maps</a>
+                    </address>
+                </section>
+
+                <!-- Phone Section -->
+                <section>
+                    <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                    <h2>Phone</h2>
+                    <p>123-456-789-OOO</p>
+                </section>
+
+                <!-- Email Section -->
+                <section>
+                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                    <h2>Email</h2>
+                    <p>HGBC@gmail.com</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form>
+            <div class="contact-form">
+                <input type="text" required placeholder="Full Name">
+            </div>
+
+            <div class="contact-form">
+                <input type="email" required placeholder="Email">
+            </div>
+
+            <div class="contact-form">
+                <textarea name="text" required placeholder="Type your Message"></textarea>
+            </div>
+
+            <div class="contact-form">
+                <input type="submit" name="submit" value="Send Message">
+            </div>
+        </form>
+
+        <!-- Social Media Links -->
+        <div class="media">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.whatsapp.com" target="_blank"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square"></i></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional for navbar toggling) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
